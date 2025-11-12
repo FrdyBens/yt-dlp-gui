@@ -1,0 +1,14 @@
+{
+  "name": "ytweb",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm -C server dev\" \"pnpm -C client dev\"",
+    "build": "pnpm -C client build && pnpm -C server build",
+    "start": "node dist/server/index.js",
+    "test": "pnpm -C server test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
